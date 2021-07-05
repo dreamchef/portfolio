@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lys0l/portfolio.git"
+  },
+  "author": "lys0l",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lys0l/portfolio/issues"
+  },
+  "homepage": "https://github.com/lys0l/portfolio#readme"
+}
