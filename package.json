@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/lys0l/portfolio/issues"
   },
-  "homepage": "https://github.com/lys0l/portfolio#readme"
+  "homepage": "https://github.com/lys0l/portfolio#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
