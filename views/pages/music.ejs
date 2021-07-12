@@ -1,5 +1,20 @@
 <%- include('../partials/header'); %>
+<body>   
     <div id="musicDiv" class="container d-flex flex-wrap justify-content-center">
-        
+        <% var title %>
+        <% var path %>
+        <% for(var i = 0; i < numFiles; i++) { %>
+            <% path = fileNames[i];%>
+            <% title = path.slice(0,-4).replace(/([A-Z])/g, ' $1'); %>
+            <div class="card" style="width: 15rem; margin: 1rem;">
+                <div class="card-body">
+                    <p class="card-text text-center"><%= title %></p>
+                    <audio controls preload="metadata" style=" width:100%;">
+                        <source src="/content/music/<%= path %>" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio><br />
+                </div>
+            </div>
+        <% } %>
     </div>
     <%- include('../partials/footer'); %>
