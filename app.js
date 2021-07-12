@@ -13,6 +13,8 @@ app
 
 app.get('/', (req, res) => res.render('pages/index'));
 
+app.get('/video', (req, res) => res.render('pages/video'));
+
 app.get('/music', (req, res) => {
   contentDir = path.join(__dirname, 'content/music/');
   var fileNames = fs.readdirSync(contentDir).filter(el => path.extname(el) === '.mp3');
@@ -22,5 +24,7 @@ app.get('/music', (req, res) => {
     numFiles: fileNames.length
   });
 });
+
+
 // Routes
 
