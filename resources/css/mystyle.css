@@ -3,6 +3,28 @@
     background-color: black;
 }
 
+#footer {
+    background-color: grey;
+}
+
+body {
+    background-color: white;
+}
+
+.card {
+    background-color: black;
+}
+
+p {
+    color: white;
+}
+
+h1,h2,h3 {
+    color: white;
+}
+
+
+
 .col {
     text-align: center;
 }
