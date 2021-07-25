@@ -1,10 +1,9 @@
 #mynavbar {
-    width: 100%;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.85);
 }
 
-#footer {
-    background-color: grey;
+.footer {
+    background-color: rgba(0, 0, 0, 0.85);
 }
 
 body {
@@ -12,10 +11,10 @@ body {
 }
 
 .card {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.85);
 }
 
-p {
+p,i {
     color: white;
 }
 
