@@ -1,12 +1,21 @@
 <%- include('../partials/header'); %>
 <body>
     <div id="pageHeader" class="container text-center">
-        <h1 style="margin: 1%;">Video Projects</h1>
+        <h1 style="margin: 1%;">Video</h1>
     </div>
     <div class="container text-center">
-        <h2 style="margin: 1%;">Motion Graphics</h2>
-    </div>  
+        <h2 style="color: black; margin: 1%;">Information Technology Tutorials</h2>
+    </div>
     <div class="container d-flex flex-wrap justify-content-center">
-        coming soon
+        <% var video; %>
+        <% for(var i = 0; i < numVideos-1; i++) { %>
+            <% video = videos[i];%>
+            <div class="card" style="width: 40%; margin: 1%; padding: 0">
+                <div class="card-body" style="padding: 4%;">
+                    <iframe style="width: 100%" src="https://www.youtube.com/embed/<%= video.id.videoId %>" frameborder="0" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+        <% } %>
     </div>
     <%- include('../partials/footer'); %>
