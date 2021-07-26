@@ -13,7 +13,9 @@
             <div class="card" style="width: 15rem; margin: 1rem;">
                 <img class="card-img-top rounded" src="/content/music/cover/<%= fileName.replace('.mp3','.jpg') %>" alt="Cover image not found" style="width: 100%; height: 100%; padding: 5%">
                 <div class="card-body">
-                    <p class="card-text text-center"><i><%= title %></i></p>
+                    <p class="card-text text-center">
+                        <i style="color:white;"><%= title %></i>
+                    </p>
                     <audio controls preload="metadata" style=" width:100%;">
                         <source src="/content/music/<%= fileName %>" type="audio/mpeg">
                         Your browser does not support the audio element.

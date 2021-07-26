@@ -12,7 +12,6 @@ app
   .set('view engine', 'ejs')
   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
-
 app.get('/', (req, res) => res.render('pages/index'));
 
 app.get('/video', (req, res) => {
@@ -44,6 +43,9 @@ app.get('/music', (req, res) => {
   });
 });
 
+app.get('/interactive', (req, res) => {
+  res.render('pages/interactive');
+})
 
-// Routes
+
 
