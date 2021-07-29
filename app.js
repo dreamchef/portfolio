@@ -35,32 +35,24 @@ app.get('/video', (req, res) => {
         motionGraphicsIds: motionGraphicsRes.data.items,
         liveActionIds: liveActionRes.data.items
       });
-      console.log(GuideWareRes.data.items);
-      console.log(motionGraphicsRes.data.items);
-      console.log(liveActionRes.data.items);
     }));
 });
-//       url: youtubeQuery,
-//       method: 'GET',
-//       dataType:'json',
-//     })
-//       .then(apiRes => {
-//         GuideWareVideos = apiRes.data.items;
-//         console.log(GuideWareVideos)
-//       });
-//   res.render('pages/video', {
-//     videos: GuideWareVideos,
-//     numVideos: GuideWareVideos.length
-//   });
-// });
 
 app.get('/music', (req, res) => {
   contentDir = path.join(__dirname, 'content/music/');
   var fileNames = fs.readdirSync(contentDir).filter(el => path.extname(el) === '.mp3');
   console.log(fileNames[0]);
+  var years = [
+    "2021",
+    "2016",
+    "2021",
+    "2015",
+    "2020"
+  ]
   res.render('pages/music', {
     fileNames: fileNames,
-    numFiles: fileNames.length
+    numFiles: fileNames.length,
+    years: years
   });
 });
 

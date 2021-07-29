@@ -6,6 +6,13 @@
     margin: 1%; 
 }
 
+.song-card {
+    width: 33vh;
+    margin: 1%; 
+    background-color: white;
+    border: none;
+}
+
 .youtube-iframe {
     width: 100%; 
     height: 100%;
