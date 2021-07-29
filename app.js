@@ -20,7 +20,7 @@ app.get('/video', (req, res) => {
   var motionGraphicsPlaylistId = "PLpImgnizUWfEtxh57EOlB34x6ZDtsdQmw";
   var liveActionPlaylistId = "PLpImgnizUWfHW-uEIUikz1GJQV0TX2sOC";
   var GuideWareQuery = "https://www.googleapis.com/youtube/v3/search?key=" + apiKey + 
-    "&channelId=" + GuideWareChannelId + "&part=id&order=date&maxResults=20";
+    "&channelId=" + GuideWareChannelId + "&part=id&order=date&maxResults=5";
   var motionGraphicsQuery = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=10&playlistId=" + motionGraphicsPlaylistId + "&key=" + apiKey;
   var liveActionQuery = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId="
     + liveActionPlaylistId + "&key=" + apiKey;
