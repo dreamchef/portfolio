@@ -16,22 +16,43 @@ app.get('/', (req, res) => res.render('pages/index'));
 
 app.get('/video', (req, res) => {
   var apiKey = "AIzaSyDBI4bXfbhdwQTe4as5g7kPCGCNMCY2-b0";
-  var channelId = "UCrN1yxZoYwAlkzKSFysRMLw";
-  var youtubeQuery = "https://www.googleapis.com/youtube/v3/search?key=" + apiKey + 
-    "&channelId=" + channelId + "&part=id&order=date&maxResults=20";
-  axios({
-    url: youtubeQuery,
-      method: 'GET',
-      dataType:'json',
-    })
-      .then(apiRes => {
-        console.log(apiRes.data.items);
-        res.render('pages/video', {
-          videos: apiRes.data.items,
-          numVideos: apiRes.data.items.length
-        });
-      })
+  var GuideWareChannelId = "UCrN1yxZoYwAlkzKSFysRMLw";
+  var motionGraphicsPlaylistId = "PLpImgnizUWfEtxh57EOlB34x6ZDtsdQmw";
+  var liveActionPlaylistId = "PLpImgnizUWfHW-uEIUikz1GJQV0TX2sOC";
+  var GuideWareQuery = "https://www.googleapis.com/youtube/v3/search?key=" + apiKey + 
+    "&channelId=" + GuideWareChannelId + "&part=id&order=date&maxResults=20";
+  var motionGraphicsQuery = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=10&playlistId=" + motionGraphicsPlaylistId + "&key=" + apiKey;
+  var liveActionQuery = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId="
+    + liveActionPlaylistId + "&key=" + apiKey;
+  axios.all([
+    axios.get(GuideWareQuery),
+    axios.get(motionGraphicsQuery),
+    axios.get(liveActionQuery)
+  ]).then(
+    axios.spread((GuideWareRes, motionGraphicsRes, liveActionRes) => {
+      res.render('pages/video', {
+        GuideWareIds: GuideWareRes.data.items,
+        motionGraphicsIds: motionGraphicsRes.data.items,
+        liveActionIds: liveActionRes.data.items
+      });
+      console.log(GuideWareRes.data.items);
+      console.log(motionGraphicsRes.data.items);
+      console.log(liveActionRes.data.items);
+    }));
 });
+//       url: youtubeQuery,
+//       method: 'GET',
+//       dataType:'json',
+//     })
+//       .then(apiRes => {
+//         GuideWareVideos = apiRes.data.items;
+//         console.log(GuideWareVideos)
+//       });
+//   res.render('pages/video', {
+//     videos: GuideWareVideos,
+//     numVideos: GuideWareVideos.length
+//   });
+// });
 
 app.get('/music', (req, res) => {
   contentDir = path.join(__dirname, 'content/music/');
