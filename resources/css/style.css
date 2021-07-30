@@ -6,6 +6,12 @@
     margin: 1%; 
 }
 
+.landing {
+    background-image: url("/resources/img/background.jpg");
+    background-size: cover;
+    background-position-x: center;
+}
+
 .song-card {
     width: 33vh;
     margin: 1%; 
@@ -21,4 +27,14 @@
 
 .col {
     text-align: center;
+}
+
+.banner-headline {
+    font-size: 3.34rem;
+    line-height: 2rem;
+}
+
+.banner {
+    font-size: 5rem;
+    line-height: 4rem;
 }
