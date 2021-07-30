@@ -24,6 +24,16 @@ a {
     background-position-x: center;
 }
 
+audio {
+    width:100% !important;
+    min-height: 30px;
+    display:block;
+ }
+
+ .audio-block {
+    height:50px;
+ }
+
 .song-card {
     width: 33vh;
     margin: 1%; 
