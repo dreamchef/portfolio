@@ -11,21 +11,24 @@
             <% fileName = fileNames[i];%>
             <% year = years[i] %>
             <% title = fileName.slice(0,-4).replace(/([A-Z])/g, ' $1'); %>
-            <div class="card song-card" >
-                <div style="position: absolute">
-                    <div style="background-color: black; opacity: 0.8; color: white; font-size: 14pt; padding: 1vh; margin: 1.5vh">
-                        <%= title %>
+            <div class="song-card">
+                <div>
+                    <div style="position: absolute">
+                        <div style="background-color: black; opacity: 0.8; color: white; font-size: 14pt; padding: 1vh; margin: 1.5vh">
+                            <%= title %>
+                        </div>
+                        <div style="background-color: black; opacity: 0.8; color: white; font-size: 8pt; margin: 0 1.5vh; padding: 0.5vh 1vh; width: 5vh;">
+                            <%= year %>
+                        </div>
                     </div>
-                    <div style="background-color: black; opacity: 0.8; color: white; font-size: 8pt; margin: 0 1.5vh; padding: 0.5vh 1vh; width: 5vh;">
-                        <%= year %>
-                    </div>
+                    <img class="card-img-top"  style="width: 100%;" src="/content/music/cover/<%= fileName.replace('.mp3','.jpg') %>" alt="Cover image not found">
                 </div>
-                <img class="card-img-top" src="/content/music/cover/<%= fileName.replace('.mp3','.jpg') %>" alt="Cover image not found" height="100%">
-                <div style="height: 0px"></div>
-                <audio controls preload="metadata">
-                    <source src="/content/music/<%= fileName %>" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio><br />
+                <div>
+                    <audio controls preload="metadata" style="width: 100%;">
+                        <source src="/content/music/<%= fileName %>" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
             </div>
         <% } %>
     </div>
