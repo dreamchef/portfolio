@@ -1,3 +1,10 @@
+h1,h2 {
+    color: white;
+}
+
+.jumbotron {
+    background-color: rgba(255, 255, 255, 0.783);
+}
 
 .video-card {
     background-color: black;
@@ -6,11 +13,17 @@
     margin: 1%; 
 }
 
+a {
+    color: #0090de;
+    opacity: 1;
+}
+
 .landing {
     background-image: url("/resources/img/background.jpg");
     background-size: cover;
     background-position-x: center;
 }
+
 
 .song-card {
     width: 33vh;
@@ -30,11 +43,13 @@
 }
 
 .banner-headline {
-    font-size: 3.34rem;
-    line-height: 2rem;
+    font-size: 3.33rem;
+    line-height: 2.5rem;
+    color: #e9e1cd;
 }
 
 .banner {
     font-size: 5rem;
     line-height: 4rem;
+    color: #ccbb8e;
 }
