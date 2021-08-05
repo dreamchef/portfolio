@@ -25,11 +25,11 @@ a {
 }
 
 .song-card {
-    width: 100vw;
-    height: 100vw;
+    width: 50vh; 
+    height: 30vh; 
+    margin: 1%; 
     background-size: cover;
     position: relative;
-    margin: 10px;
 }
 
 audio {
