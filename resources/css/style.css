@@ -26,26 +26,10 @@ a {
 
 .song-card {
     width: 300px;
-    margin: 0 1%;
-    padding: 0%;
-    background-color: none;
-    border: none;
-    border-radius: 0;
-    height: 450px;
-
-}
-
-audio {
-    display: block;
-    min-height: 30px;
-    width:100% !important;
-}
-
-.song-cover {
-    width: 300px;
     height: 280px;
     background-size: cover;
-    padding: 1%;
+    padding: 0;
+    margin: 1%;
 }
 
 .card-img-top {
