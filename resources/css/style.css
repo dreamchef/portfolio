@@ -27,7 +27,7 @@ a {
 .song-card {
     width: 50vh; 
     height: 50vh; 
-    margin: 50px 1%; 
+    margin: 0 1% 50px 1%; 
     background-size: cover;
     position: relative;
 }
