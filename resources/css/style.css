@@ -30,10 +30,6 @@ audio {
     display:block;
  }
 
- .audio-block {
-    height:50px;
- }
-
 .song-card {
     width: 33vh;
     margin: 1%; 
