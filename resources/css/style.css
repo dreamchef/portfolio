@@ -28,6 +28,13 @@ a {
     width: 300px;
     height: 300px;
     background-size: cover;
+    position: relative;
+    margin: 10px;
+}
+
+audio {
+    position: absolute;
+    bottom: 0;
 }
 
 .card-img-top {
