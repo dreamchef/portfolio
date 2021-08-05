@@ -34,7 +34,7 @@ a {
 
 audio {
     position: absolute;
-    top: 250px;
+    bottom: 0px;
 }
 
 .card-img-top {
