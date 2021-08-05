@@ -25,17 +25,19 @@ a {
 }
 
 .song-card {
-    width: 33vh;
+    width: 300px;
     margin: 0 1%;
     padding: 0%;
     background-color: none;
     border: none;
     border-radius: 0;
-    height: 380px;
+    height: 350px;
+
 }
 
 .song-cover {
-    height: 300px;
+    width: 300px;
+    height: 280px;
     background-size: cover;
     padding: 1%;
 }
