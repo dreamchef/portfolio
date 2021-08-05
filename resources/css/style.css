@@ -24,18 +24,20 @@ a {
     background-position-x: center;
 }
 
-audio {
-    width:100% !important;
-    min-height: 30px;
-    display:block;
- }
-
 .song-card {
     width: 33vh;
-    margin: 1%; 
+    margin: 0 1%;
+    padding: 0%;
     background-color: none;
     border: none;
     border-radius: 0;
+    height: 380px;
+}
+
+.song-cover {
+    height: 300px;
+    background-size: cover;
+    padding: 1%;
 }
 
 .card-img-top {
