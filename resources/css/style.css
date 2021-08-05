@@ -31,8 +31,14 @@ a {
     background-color: none;
     border: none;
     border-radius: 0;
-    height: 350px;
+    height: 450px;
 
+}
+
+audio {
+    display: block;
+    min-height: 30px;
+    width:100% !important;
 }
 
 .song-cover {
