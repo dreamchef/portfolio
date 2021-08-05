@@ -18,6 +18,14 @@ a {
     opacity: 1;
 }
 
+h3 {
+    font-size: 28px;
+}
+
+.mynavbar {
+    height: 50px;
+}
+
 .landing {
     background-image: url("/resources/img/background.jpg");
     background-size: cover;
