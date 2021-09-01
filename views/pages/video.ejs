@@ -5,21 +5,7 @@
     </div>
 
     <div class="container text-center">
-        <h2 style="margin: 1%;">Sketches</h2>
-    </div> 
-    <div class="container d-flex flex-wrap justify-content-center">
-        <% for(var i = 0; i < liveActionIds.length; i++) { %>
-        <% video = liveActionIds[i];%>
-        <% vsource = "https://www.youtube.com/embed/" + video.snippet.resourceId.videoId; %>
-        <% console.log(vsource); %>
-        <div class="card video-card">
-                <iframe class="youtube-iframe" src="<%= vsource %>" frameborder="0" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <% } %>
-    </div>
-
-    <div class="container text-center">
-        <h2 style="margin: 1%;">Motion Graphics</h2>
+        <h2 style="margin: 1%;">3D Animation & Motion Graphics</h2>
     </div>
     <div class="container d-flex flex-wrap justify-content-center">
         <% for(var i = 0; i < motionGraphicsIds.length; i++) { %>
@@ -46,6 +32,20 @@
                     <iframe class="youtube-iframe" src="<%= vsource %>" frameborder="0" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe>
             </div>
             
+        <% } %>
+    </div>
+
+    <div class="container text-center">
+        <h2 style="margin: 1%;">Live-Action Sketches</h2>
+    </div> 
+    <div class="container d-flex flex-wrap justify-content-center">
+        <% for(var i = 0; i < liveActionIds.length; i++) { %>
+        <% video = liveActionIds[i];%>
+        <% vsource = "https://www.youtube.com/embed/" + video.snippet.resourceId.videoId; %>
+        <% console.log(vsource); %>
+        <div class="card video-card">
+                <iframe class="youtube-iframe" src="<%= vsource %>" frameborder="0" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+        </div>
         <% } %>
     </div>
     
